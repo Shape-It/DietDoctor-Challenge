@@ -2,31 +2,26 @@ import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { colors, spacing } from '@/theme';
+import { normalize } from '@/utils';
 
 interface Button {
   title: string;
   onPress: any;
-  color: string;
+  style?: Array<any>;
 }
 
 const styles = StyleSheet.create({
-  button: {
-    marginVertical: spacing.xl,
-    backgroundColor: colors.black,
-    paddingHorizontal: spacing.m,
-    paddingVertical: spacing.xs,
-    borderRadius: spacing.xs,
-  },
   buttonText: {
-    fontSize: spacing.m,
+    textAlign: 'center',
+    fontSize: normalize(16),
     color: colors.white,
-    fontWeight: 'bold',
+    fontWeight: '500',
   },
 });
 
-export const Button: React.FC<Button> = ({ title, onPress, color }) => {
+export const Button: React.FC<Button> = ({ title, onPress, style }) => {
   return (
-    <TouchableOpacity style={[styles.button, { backgroundColor: color }]} onPress={onPress}>
+    <TouchableOpacity style={style} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
