@@ -9,6 +9,7 @@ interface Button {
   style?: any;
   icon?: any;
   isSocialButton?: boolean;
+  testID?: string;
 }
 
 const styles = StyleSheet.create({
@@ -49,11 +50,13 @@ export const Button: React.FC<Button> = ({
   style,
   icon,
   isSocialButton = false,
+  testID,
 }) => {
   return (
     <TouchableOpacity
       style={[isSocialButton ? styles.socialContainer : styles.container, style]}
       onPress={onPress}
+      testID={testID}
     >
       {isSocialButton && <Text style={styles.icon}>{icon}</Text>}
       <Text style={isSocialButton ? styles.textSocialButton : styles.text}>{title}</Text>

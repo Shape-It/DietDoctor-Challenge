@@ -23,6 +23,7 @@ export function Login(): JSX.Element {
     <Container>
       <ScrollView style={styles.container} contentInsetAdjustmentBehavior="automatic">
         <TextField
+          testId={strings.login.emailPlaceholder}
           autoComplete="email"
           keyboardType="email-address"
           autoCapitalize="none"
@@ -33,6 +34,7 @@ export function Login(): JSX.Element {
           style={styles.field}
         />
         <TextField
+          testId={strings.login.passwordPlaceholder}
           secureTextEntry
           autoCapitalize="none"
           autoComplete="password"
@@ -45,7 +47,12 @@ export function Login(): JSX.Element {
         <TouchableOpacity>
           <Text style={styles.forgotPasswordText}>{strings.login.forgotPassword}</Text>
         </TouchableOpacity>
-        <Button title={strings.login.button} onPress={handleLogin} style={styles.button} />
+        <Button
+          title={strings.login.button}
+          onPress={handleLogin}
+          style={styles.button}
+          testID={strings.login.button}
+        />
         <Divider />
         <Button
           title={strings.login.facebookSocialButton}

@@ -18,6 +18,7 @@ interface TextField {
   autoCapitalize?: string;
   onChangeText?: any;
   textContentType: string;
+  testId?: string;
 }
 
 const styles = StyleSheet.create({
@@ -49,7 +50,7 @@ export const TextField: React.FC<TextField> = ({
   secureTextEntry,
   accesibilityHint,
   accesibilityLabel,
-  ...rest
+  testId,
 }) => {
   const [isSecureTextEntry, setIsSecureTextEntry] = useState(!!secureTextEntry);
 
@@ -65,6 +66,7 @@ export const TextField: React.FC<TextField> = ({
     <View style={style}>
       <View style={styles.inputContainer}>
         <TextInput
+          testID={testId}
           style={styles.input}
           value={value}
           placeholder={placeholder}

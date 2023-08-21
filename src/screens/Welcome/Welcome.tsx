@@ -43,11 +43,13 @@ export function Welcome(): JSX.Element {
           title={strings.welcome.login}
           onPress={handleLogin}
           style={[styles.button, styles.loginButton]}
+          testID={strings.welcome.login}
         />
         <Button
           title={strings.welcome.skip}
           onPress={handleSkip}
           style={[styles.button, styles.skipButton]}
+          testID={strings.welcome.skip}
         />
       </View>
     </ImageBackground>
