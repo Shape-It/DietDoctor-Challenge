@@ -1,34 +1,28 @@
 import React from 'react';
-import { Image, ImageBackground, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ImageBackground, View } from 'react-native';
 import { styles } from './Welcome.styles';
 import { ParamListBase, useNavigation } from '@react-navigation/native';
-import { NAVIGATION } from '@/constants';
+import { NAVIGATION, WELCOME_GRADIENT } from '@/constants';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Button } from '@/components';
+import { Button, LanguageButton } from '@/components';
 import LinearGradient from 'react-native-linear-gradient';
-
-const gradientColors = [
-  'transparent',
-  'rgba(0, 0, 0, 0.5)',
-  'rgba(0, 0, 0, 0.6)',
-  'rgba(0, 0, 0, 0.7)',
-  'rgba(0, 0, 0, 0.8)',
-  'rgba(0, 0, 0, 0.9)',
-  'rgba(0, 0, 0, 9)',
-];
-
-const strings = {
-  signup: 'Sign up and try it for free',
-  login: 'Already a member? Log in',
-  skip: 'Skip for now',
-};
+import { strings } from '@/localization';
+import { useDispatch } from 'react-redux';
+import { authActions } from '@/store/auth';
 
 export function Welcome(): JSX.Element {
+  const dispatch = useDispatch();
   const { navigate } = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
-  const handleSignup = () => {
+  const handleLogin = () => {
     navigate(NAVIGATION.login);
   };
+
+  const handleSkip = () => {
+    dispatch(authActions.changeOnboardingVisibility());
+  };
+
+  const handleSignup = () => {};
 
   return (
     <ImageBackground
@@ -36,27 +30,23 @@ export function Welcome(): JSX.Element {
       source={require('@/assets/background/welcome.png')}
       resizeMode="cover"
     >
-      <Button
-        title={'English'}
-        onPress={handleSignup}
-        style={[styles.button, styles.languageButton]}
-      />
+      <LanguageButton />
       <Image source={require('@/assets/logo.png')} resizeMode="contain" style={styles.image} />
-      <LinearGradient colors={gradientColors} style={styles.gradient} />
+      <LinearGradient colors={WELCOME_GRADIENT} style={styles.gradient} />
       <View style={styles.buttonsContainer}>
         <Button
-          title={strings.signup}
+          title={strings.welcome.signup}
           onPress={handleSignup}
           style={[styles.button, styles.signupButton]}
         />
         <Button
-          title={strings.login}
-          onPress={handleSignup}
+          title={strings.welcome.login}
+          onPress={handleLogin}
           style={[styles.button, styles.loginButton]}
         />
         <Button
-          title={strings.skip}
-          onPress={handleSignup}
+          title={strings.welcome.skip}
+          onPress={handleSkip}
           style={[styles.button, styles.skipButton]}
         />
       </View>

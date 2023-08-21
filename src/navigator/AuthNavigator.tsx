@@ -14,7 +14,21 @@ export function AuthNavigator() {
         name={NAVIGATION.welcome}
         options={{ headerShown: false }}
       />
-      <Stack.Screen component={Login} name={NAVIGATION.login} />
+      <Stack.Screen
+        component={Login}
+        name={NAVIGATION.login}
+        options={{
+          headerLargeTitle: true,
+          headerShadowVisible: false,
+          headerTitleStyle: {
+            fontWeight: '300',
+          },
+          headerLargeTitleStyle: {
+            fontWeight: '500',
+            fontSize: 40,
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 }

@@ -10,7 +10,11 @@ export function AppNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Group>
-        <Stack.Screen name={NAVIGATION.home} component={Home} />
+        <Stack.Screen
+          name={NAVIGATION.home}
+          component={Home}
+          options={{ headerLargeTitle: true }}
+        />
       </Stack.Group>
     </Stack.Navigator>
   );

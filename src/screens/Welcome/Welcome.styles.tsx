@@ -13,26 +13,23 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   gradient: {
+    position: 'absolute',
     width: '100%',
     height: '60%',
     zIndex: 0,
-    position: 'absolute',
     bottom: 0,
   },
   button: {
     zIndex: 1,
-    paddingVertical: 12,
-    borderRadius: 50,
     marginBottom: spacing.s,
   },
   signupButton: {
-    backgroundColor: '#06B05B',
-    borderColor: 'black',
+    backgroundColor: colors.green,
+    borderColor: colors.black,
     borderWidth: 0.2,
   },
   loginButton: {
-    backgroundColor: 'transparent',
-    borderColor: 'white',
+    borderColor: colors.white,
     borderWidth: 1.5,
   },
   skipButton: {
@@ -42,16 +39,10 @@ export const styles = StyleSheet.create({
     marginTop: 'auto',
     marginHorizontal: spacing.s,
   },
-  languageButton: {
-    marginTop: spacing.xl,
-    marginHorizontal: 120,
-    backgroundColor: '#656565ca',
-  },
   image: {
-    position: 'absolute',
-    tintColor: colors.white,
-    top: '5%',
+    justifyContent: 'center',
     alignSelf: 'center',
+    tintColor: colors.white,
     width: 200,
   },
 });
