@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   },
   gradient: {
     width: '100%',
-    height: '50%',
+    height: '60%',
     zIndex: 0,
     position: 'absolute',
     bottom: 0,
@@ -36,7 +36,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1.5,
   },
   skipButton: {
-    backgroundColor: 'transparent',
     marginBottom: spacing.l,
   },
   buttonsContainer: {
@@ -46,6 +45,13 @@ export const styles = StyleSheet.create({
   languageButton: {
     marginTop: spacing.xl,
     marginHorizontal: 120,
-    backgroundColor: '#656565',
+    backgroundColor: '#656565ca',
+  },
+  image: {
+    position: 'absolute',
+    tintColor: colors.white,
+    top: '5%',
+    alignSelf: 'center',
+    width: 200,
   },
 });
