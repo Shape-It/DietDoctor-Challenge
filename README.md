@@ -4,13 +4,13 @@
 
 ## About the App
 
-This app was made in react native in order to carry out the Flix React Native coding challenge.
+This app was made in React Native in order to carry out the Diet Doctor React Native coding challenge.
 
 ![Group 2](https://github.com/fmartinez98/flix-challenge/assets/89869262/e32a4e41-26e2-4f00-aee5-a5ee6d37efdf)
 
 ## How The App Works
 
-This app is only meant to replicate the current flow of the diet doctor app on the app store.
+This app is only meant to replicate the current flow of the Diet Doctor app on the App Store.
 
 https://github.com/fmartinez98/flix-challenge/assets/89869262/16048472-72f8-4ff8-962a-40e1e0bc3d09
 
