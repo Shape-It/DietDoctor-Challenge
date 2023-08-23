@@ -4,14 +4,14 @@ import { theme } from '@/theme';
 import { handleReady, navigationRef } from '@/services';
 import { AppNavigator } from './AppNavigator';
 import { AuthNavigator } from './AuthNavigator';
-import { useIsLogged } from '@/store/auth';
+import { useHasSeenOnboarding } from '@/store/auth';
 
 export function RootNavigator() {
-  const isLogged = useIsLogged();
+  const hasSeenOnboarding = useHasSeenOnboarding();
 
   return (
     <NavigationContainer theme={theme} onReady={handleReady} ref={navigationRef}>
-      {isLogged ? <AppNavigator /> : <AuthNavigator />}
+      {hasSeenOnboarding ? <AppNavigator /> : <AuthNavigator />}
     </NavigationContainer>
   );
 }

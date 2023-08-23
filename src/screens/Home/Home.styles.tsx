@@ -4,15 +4,13 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: spacing.l,
   },
-  welcome: {
-    fontSize: spacing.m,
-    marginBottom: spacing.m,
-  },
-  text: {
-    fontSize: spacing.l,
-    fontWeight: 'bold',
+  button: {
+    justifyContent: 'flex-end',
+    backgroundColor: colors.black,
+    paddingVertical: spacing.s,
+    borderRadius: 30,
   },
 });

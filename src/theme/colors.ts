@@ -28,4 +28,7 @@ export const colors = {
   zeta400: '#ED8936',
   white: '#FFFFFF',
   black: '#000000',
+  transparentGray: '#656565ca',
+  green: '#06B05B',
+  blue: '#4679EB',
 };
