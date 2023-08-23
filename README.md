@@ -12,7 +12,7 @@ This app was made in React Native in order to carry out the Diet Doctor React Na
 
 This app is only meant to replicate the current flow of the Diet Doctor app on the App Store.
 
-https://github.com/fmartinez98/flix-challenge/assets/89869262/16048472-72f8-4ff8-962a-40e1e0bc3d09
+https://github.com/Shape-It/diet-doctor/assets/89869262/fd1d9d3f-5dc1-4f13-8ddc-8254f5882ead
 
 ## Architecture
 
