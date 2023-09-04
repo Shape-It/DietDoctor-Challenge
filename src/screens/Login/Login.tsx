@@ -19,6 +19,8 @@ export function Login(): JSX.Element {
 
   const handleSocialLogin = () => {};
 
+  const handleForgotPassword = () => {};
+
   return (
     <Container>
       <ScrollView style={styles.container} contentInsetAdjustmentBehavior="automatic">
@@ -44,7 +46,7 @@ export function Login(): JSX.Element {
           value={password}
           style={styles.field}
         />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleForgotPassword}>
           <Text style={styles.forgotPasswordText}>{strings.login.forgotPassword}</Text>
         </TouchableOpacity>
         <Button

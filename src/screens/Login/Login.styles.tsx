@@ -1,5 +1,4 @@
 import { colors, shadow, spacing } from '@/theme';
-import { normalize } from '@/utils';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({

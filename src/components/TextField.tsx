@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import { normalize } from '@/utils';
-import { colors, spacing, theme } from '@/theme';
+import { colors, spacing } from '@/theme';
 
 interface TextField {
   onBlur?: any;
