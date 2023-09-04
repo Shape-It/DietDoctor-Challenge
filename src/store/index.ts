@@ -11,11 +11,19 @@ import {
 } from 'redux-persist';
 import { authReducer } from './auth';
 import { storage } from '@/storage';
+import { authService } from '@/services';
 
 const authPersistConfig = {
   key: 'auth',
   storage: storage,
 };
+
+const middlewares = [authService.middleware];
+
+if (__DEV__) {
+  const reduxFlipperMiddleware = require('redux-flipper').default;
+  middlewares.push(reduxFlipperMiddleware());
+}
 
 export const store = configureStore({
   reducer: {
@@ -29,7 +37,7 @@ export const store = configureStore({
       },
     };
 
-    return getDefaultMiddleware(defaultMiddlewareOptions);
+    return getDefaultMiddleware(defaultMiddlewareOptions).concat(middlewares);
   },
 });
 
