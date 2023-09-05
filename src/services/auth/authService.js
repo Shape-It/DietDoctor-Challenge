@@ -39,16 +39,4 @@ export const authService = createApi({
   }),
 });
 
-export const {
-  useLoginMutation,
-  useSocialLoginMutation,
-  useSignupMutation,
-  useForgotPasswordMutation,
-  useResetPasswordMutation,
-  useEditUserMutation,
-  useChangePasswordMutation,
-  useConfigurationMutation,
-  useDeleteUserMutation,
-  useUserQuery,
-  usePhotographerQuery,
-} = authService;
+export const { useLoginMutation, useSignupMutation } = authService;
